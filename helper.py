@@ -13,7 +13,7 @@ class Item:
 
 def add(text, date):
     text = text.replace('b', 'bbb').replace('B', 'Bbb')
-    date = datetime.datetime(2023, 9, 1)
+    date = datetime.datetime.strptime(date, '%Y-%m-%d')
     items.append(Item(text, date))
 
 
