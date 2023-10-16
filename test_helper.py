@@ -29,3 +29,7 @@ def test_sort():
     # Then: They should be sorted by date
     for i in range(len(helper.items) - 1):
         assert helper.items[i].date < helper.items[i+1].date
+
+def test_csv():
+    csvTest = helper.get_csv()
+    assert isinstance(csvTest, str)
