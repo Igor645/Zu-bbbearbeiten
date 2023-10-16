@@ -15,7 +15,7 @@ def add(text, date):
     text = text.replace('b', 'bbb').replace('B', 'Bbb')
     date = datetime.datetime.strptime(date, '%Y-%m-%d')
     items.append(Item(text, date))
-
+    items.sort(key=lambda x: x.date)
 
 def get_all():
     return items
